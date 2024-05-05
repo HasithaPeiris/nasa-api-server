@@ -7,6 +7,10 @@ import connectDB from "./config/db.js";
 const port = process.env.PORT || 5000;
 import userRoutes from "./routes/userRoutes.js";
 
+connectDB();
+
+const app = express();
+
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
@@ -19,10 +23,6 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
 });
-
-connectDB();
-
-const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
