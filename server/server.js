@@ -14,7 +14,7 @@ const app = express();
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://6637b881456725f2c9a1a6d2--symphonious-sunflower-235e5c.netlify.app"
+    "https://space-api-app.netlify.app"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
